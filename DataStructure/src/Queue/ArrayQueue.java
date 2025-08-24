@@ -15,6 +15,7 @@ public class ArrayQueue {
 			}
 			System.out.println();
 		}
+		//add value in queue
 		void enque(int val) {
 			if(front == rear && flag) {
 				System.out.println("Queue already fill");
