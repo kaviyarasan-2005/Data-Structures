@@ -11,7 +11,7 @@ public class Main {
 			list.display();
 			System.out.println();
 			list.insertAtpos(2,3);
-			list.insertAtpos(13, 19);
+			list.insertAtpos(13,19);
 			list.display();
 			System.out.println();
 			list.insertAtlast(5);
