@@ -6,6 +6,8 @@ public class KthBit {
 			int val = 25;
 			System.out.println( "View Kth bit "+(val &(1<<k)));
 			System.out.println("Toggle the value  " + (val ^ (1<<k)));
+			System.out.println("Set the Kth bit "+(val | (1<<k)));
+			System.out.println("Set the Kth bit "+(val & ~(1<<k)));
 		}	
 		
 }
