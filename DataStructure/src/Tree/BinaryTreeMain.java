@@ -34,5 +34,6 @@ public class BinaryTreeMain {
 		bst.Search(bst.root,110);
 		bst.Search(bst.root,120);
 		bst.Search(bst.root,8);
+		
 	}
 }
