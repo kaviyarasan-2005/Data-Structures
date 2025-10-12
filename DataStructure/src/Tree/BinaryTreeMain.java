@@ -17,23 +17,20 @@ public class BinaryTreeMain {
 		System.out.println();
 		System.out.println("Here After Binary Search Tree :");
 		BinarySearchTree bst = new BinarySearchTree(50);
-		bst.ReturnInsert(bst.root,20);
-		bst.Voidinsert(bst.root,30);
+		bst.Voidinsert(bst.root,20);
 		bst.Voidinsert(bst.root,70);
-		bst.Voidinsert(bst.root,80);
-		bst.Voidinsert(bst.root,90);
 		bst.Voidinsert(bst.root,10);
-		bst.ReturnInsert(bst.root,25);
-		bst.ReturnInsert(bst.root,210);
-		bst.ReturnInsert(bst.root,120);
-		bst.ReturnInsert(bst.root,2);
-		bst.ReturnInsert(bst.root,0);
+		bst.Voidinsert(bst.root,25);
+		bst.Voidinsert(bst.root,60);
+		bst.ReturnInsert(bst.root,90);
+		bst.ReturnInsert(bst.root,55);
+		bst.ReturnInsert(bst.root,80);
+		bst.ReturnInsert(bst.root,75);
 		bst.InOrder(bst.root);
 		System.out.println();
 		bst.Search(bst.root,10);
-		bst.Search(bst.root,110);
-		bst.Search(bst.root,120);
-		bst.Search(bst.root,8);
+		bst.delete(70);
+		bst.InOrder(bst.root);
 		
 	}
 }
