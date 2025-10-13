@@ -1,7 +1,9 @@
 package Tree;
+import java.util.*;
 // basic not optimal not realtime
 public  class BinaryTree {
 	Node root;
+
 	class Node{
 		int data;
 		Node left,right;
@@ -45,6 +47,21 @@ public  class BinaryTree {
 		postOrder(root.left);
 		postOrder(root.right);
 		System.out.print(root.data+" ");
+	}
+	Queue<Node> qu = new LinkedList<>();
+	public void levelOrder(Node root) {
+		qu.add(root);
+		while(!qu.isEmpty()) {
+			Node n = qu.poll();
+			System.out.print(n.data+" ");
+			
+			if(n.left != null) {
+				qu.add(n.left);
+			}
+			if(n.right != null) {
+				qu.add(n.right);
+			}
+		}
 	}
 	
 }

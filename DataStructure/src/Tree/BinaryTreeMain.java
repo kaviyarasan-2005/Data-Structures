@@ -9,11 +9,18 @@ public class BinaryTreeMain {
 		tree.insertleft(tree.root.left, 3);
 		tree.insertright(tree.root.left, 8);
 		tree.insertleft(tree.root.right, 12);
+		System.out.println();
+		System.out.println("preorder");
 		tree.preOrder(tree.root);
 		System.out.println();
+		System.out.println("Inorder");
 		tree.inOrder(tree.root);
 		System.out.println();
+		System.out.println("PostOrder");
 		tree.postOrder(tree.root);
+		System.out.println();
+		System.out.println("Level order");
+		tree.levelOrder(tree.root);
 		System.out.println();
 		System.out.println("Here After Binary Search Tree :");
 		BinarySearchTree bst = new BinarySearchTree(50);
