@@ -39,7 +39,7 @@ public class ArrayListGraph {
 			}
 		}
 	}
-	//over riding?
+	//OverLoading
 	public void dfs(int v) {
 		int s = graph.size();
 		boolean[] visited = new boolean[s];
