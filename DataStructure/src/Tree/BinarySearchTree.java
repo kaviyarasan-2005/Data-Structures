@@ -77,10 +77,12 @@ public class BinarySearchTree {
 	}
 	private Node delete(Node root,int val){
 		if(root == null) {
+			System.out.println("Element not fount");
 			return root;
 		}
 		if(root.data == val) {
-			
+			System.out.println();
+			System.out.println("Deleted");
 			if(root.left == null) {
 				return root.right;
 			}

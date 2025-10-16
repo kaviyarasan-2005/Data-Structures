@@ -67,6 +67,66 @@ public class AVLtree {
 		}
 		return root;
 	}
+	public void delete(int data) {
+		delete(root,data);
+	}
+	private Node delete(Node root,int data) {
+	
+		if(root == null) {
+			System.out.println("Element Not Found");
+			return root;
+		}
+		if(root.data < data) {
+			root.right=delete(root.right,data);
+		}
+		else if(root.data > data) {
+			root.left=delete(root.left,data);
+		}
+		if(root.data == data) {
+			if(root.left == null) {
+				return root.right;
+			}
+			else if(root.right == null){
+				return root.left;
+			}
+			root.data = min(root.right);
+			root.right=delete(root.right,root.data);
+		}
+		root.height =1+Math.max(getheight(root.left),getheight(root.right));
+		int balance = balance(root);
+		// Left Condition
+		if(balance > 1) {
+			// LL case
+			if(root.left.data < data ) {
+				return RightRotate(root);
+			}
+			// LR rotate
+			if(root.left.data > data) {
+				root.left = LeftRotate(root.left);
+				return RightRotate(root);
+			}
+		}
+		// Right case
+		if(balance < -1) {
+			//RR  case
+			if(root.right.data < data) {
+				return LeftRotate(root);
+			}
+			//RL Case
+			if(root.right.data > data) {
+				root.right = RightRotate(root.right);
+				return LeftRotate(root);
+			}
+		}
+		
+		return root;
+	}
+	private int min(Node root) {
+		if(root.left!=null) {
+			return min(root.left);
+		}
+		return root.data;
+	}
 	private int balance(Node root) {
 		if(root == null) {
 			return -1;

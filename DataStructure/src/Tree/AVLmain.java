@@ -13,5 +13,13 @@ public class AVLmain {
 		System.out.println();
 		System.out.println("Height of the Tree in level order ");
 		avl.LevelOrderHeight(avl.root);
+		avl.insert(35);
+		System.out.println();
+		avl.LevelOrderDisplay(avl.root);
+		avl.delete(10);
+		System.out.println();
+		avl.LevelOrderDisplay(avl.root);
+		System.out.println();
+		avl.LevelOrderHeight(avl.root);
 	}
 }
