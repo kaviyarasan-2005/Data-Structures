@@ -55,6 +55,7 @@ public class ArrayListGraph {
 			}
 		}
 	}
+	//DFS Stack implementation.
 	public void StackDFS(int val) {
 		int s =graph.size();
 		boolean[] visited = new boolean[s];
