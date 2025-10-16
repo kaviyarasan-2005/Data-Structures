@@ -55,4 +55,26 @@ public class ArrayListGraph {
 			}
 		}
 	}
+	public void StackDFS(int val) {
+		int s =graph.size();
+		boolean[] visited = new boolean[s];
+		StackDFS(val,visited);
+	}
+	private void StackDFS(int v,boolean[] visited) {
+		Stack<Integer> st = new Stack<>();
+		st.push(v);
+		visited[v] = true;
+		while(!st.isEmpty()) {
+			int n = st.pop();
+			System.out.print(n+" ");
+			int len = graph.get(n).size();
+			for(int i=len-1;i>=0;i--) {
+				int av = graph.get(n).get(i);
+				if(!visited[av]) {
+					visited[av] = true;
+					st.push(av);
+				}
+			}
+		}
+	}
 }

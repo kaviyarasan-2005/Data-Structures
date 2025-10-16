@@ -20,5 +20,8 @@ public class GraphMain {
 		System.out.println();
 		System.out.println("DFS");
 		graph.dfs(0);
+		System.out.println();
+		System.out.println("Depth First Search Using Stack");
+		graph.StackDFS(0);
 	}	
 }
