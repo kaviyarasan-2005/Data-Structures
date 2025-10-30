@@ -19,6 +19,7 @@ class Sorting{
 		mergesort(arr, mid, end);
 		mergeinplace(arr, start, mid, end);
 	}
+	// in place it have already two sorted array as input as per index so it can sorted by two pointers
 	static void mergeinplace(int[] arr,int start,int mid,int end) {
 		int[] res = new int[end-start];
 		int i=start,j=mid,k=0;
