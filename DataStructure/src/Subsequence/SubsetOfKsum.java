@@ -2,8 +2,8 @@ package Subsequence;
 import java.util.*;
 public class SubsetOfKsum {
 	public static void main(String[] args) {
-		int[] arr = {1,2,3,4,5,9,6,2,1,4,5};
-		int k = 6;
+		int[] arr = {2,3,5};
+		int k = 8;
 		List<Integer> res = new ArrayList<>();
 		subset(0,res,arr,k,0);
 	}
@@ -12,7 +12,6 @@ public class SubsetOfKsum {
 			return;
 		}
 		sum+=arr[ind];
-		
 		res.add(arr[ind]);
 		if(sum == k) {
 			for(int i : res){
@@ -20,8 +19,7 @@ public class SubsetOfKsum {
 			}
 			System.out.println();
 		}
-		
-		subset(ind+1,res,arr,k,sum);
+		subset(ind, res, arr, k, sum);
 		sum -=arr[ind];
 		res.remove(res.size()-1);
 		subset(ind+1,res,arr,k,sum);
