@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Permutation {
 	public static void main(String[] args) {
-		int[] arr = {1,2,3};
+		int[] arr = {1,1,2};
 		List<List<Integer>> res = new ArrayList<>();
 		int len = arr.length;
 		permutate(res,new ArrayList<>(),arr,len,new boolean[len]);
@@ -19,7 +19,10 @@ public class Permutation {
 			return;
 		}
 		for(int i=0;i<len;i++) {
+			
 			if(!picked[i]) {
+				// to print only uniq permutation if duplicate elements are there in the input array
+//				if(i>0&&!picked[i-1]&&arr[i] == arr[i-1]) continue;
 				picked[i] = true;
 				list.add(arr[i]);
 				// add each number  and mark as picked
