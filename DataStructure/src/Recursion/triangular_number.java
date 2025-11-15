@@ -8,7 +8,6 @@ public class triangular_number {
 		if(n == 1) {
 			return 1;
 		}
-		int t = n+tri(n-1);
-		return t;
+		return n+tri(n-1);
 	}
 }
