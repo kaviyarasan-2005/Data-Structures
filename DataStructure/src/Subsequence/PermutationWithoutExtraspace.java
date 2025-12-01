@@ -18,9 +18,7 @@ public class PermutationWithoutExtraspace {
 		}
 	}
 	public static void main(String[] args) {
-		
 		int[] arr = {1,2,3};
 		permutation(0,arr,arr.length);
 	}
-	
 }
