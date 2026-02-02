@@ -91,7 +91,6 @@ public class BinarySearchTree {
 			}
 			root.data = min(root.right);
 			root.right=delete(root.right,root.data);
-			
 		}
 		else if(root.data > val) {
 			root.left = delete(root.left,val);

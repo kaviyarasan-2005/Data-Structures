@@ -2,9 +2,9 @@ package Recursion;
 
 public class Fibanacci_Series {
 	public static void main(String[] args) {
-		
 		int a = fib(0,1,15,0);
-		
+		System.out.println();
+		System.out.println(a);	
 	}
 	static int fib(int n1,int n2,int base,int index) {
 		System.out.print(n1+" ");

@@ -10,7 +10,6 @@ public class PermutationWithoutExtraspace {
 		if(ind == n) {
 			System.out.println(Arrays.toString(arr));
 		}
-		
 		for(int i=ind;i<n;i++) {
 			swap(arr,i,ind);
 			permutation(ind+1,arr,n);
