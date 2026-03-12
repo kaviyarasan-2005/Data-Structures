@@ -8,6 +8,7 @@ public class MathOperations {
 			a = a^b;
 			b = c<<1;
 		}
+//		a = a^b;
 		System.out.println("Addition of A and B is "+ a);
 				
 	}
