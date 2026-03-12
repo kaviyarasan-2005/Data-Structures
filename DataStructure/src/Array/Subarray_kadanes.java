@@ -20,13 +20,24 @@ public class Subarray_kadanes {
 		int len = arr.length;
 		int max = Integer.MIN_VALUE;
 		int sum =0;
+		int start =0;
+		int end =0;
 		for(int i=0;i<len;i++) {
+			if(sum == 0) {
+			start =i;	
+			}
 			sum+=arr[i];
-			max = Math.max(max, sum);
+			if(sum > max) {
+				max = sum;
+				end = i;
+			}
 			if(sum <0) {
 				sum = 0;	
 			}
 		}
 		System.out.println("Kadane max is "+ max);
+		for(int i=start;i<=end;i++) {
+			System.out.print(arr[i]+" ");
+		}
 	}
 }
